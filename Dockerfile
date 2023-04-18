@@ -38,8 +38,8 @@ ENV ANT_HOME /opt/ant
 ENV PATH ${PATH}:/opt/ant/bin
 
 # Set JDK to be 32bit
-#COPY set_java $M2
-COPY set_java /opt/apache-maven-3.8.6/bin
+COPY set_java $M2
+#COPY set_java /opt/apache-maven-3.8.6/bin
 RUN if [ "x${JAVA_VERSION}" = "x17" ]; then \
       rm $M2/set_java; \
     else \
